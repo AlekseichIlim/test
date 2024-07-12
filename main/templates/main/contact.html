@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+<!--подключение базового шаблона-->
+{% block content %}
+
+<div class="col">
+    <div class="card shadow-sm">
+
+        <div class="card-body">
+            <p class="card-text">
+                Офис МСК<br>
+                Офис СПБ
+
+            </p>
+        </div>
+    </div>
+</div>
+<div class="col">
+    <div class="card shadow-sm">
+
+        <div class="card-body">
+            <h2>Напишите нам</h2>
+            <form method="post">
+                {% csrf_token %}
+                <input class="form-control" name="name"/>
+                <input class="form-control" name="email"/>
+                <textarea class="form-control" name="message"></textarea>
+                <button type="submit" class="btn btn-primary form-control">Отправить</button>
+            </form>
+
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
